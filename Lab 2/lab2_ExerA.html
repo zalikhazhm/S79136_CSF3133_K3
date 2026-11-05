@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>UMT Hackaton Day</title>
+    </head>
+    <body>
+
+        <!--event title and tagline-->
+        <header>
+            <h1>UMT Hackaton Day</h1>
+            <p>Code, create, conquer.</p>
+        </header>
+        <!--section link-->
+        <nav>
+            <a href="#about">About the Event</a> |
+            <a href="#schedule">Event Schedule</a> |
+            <a href="#register">Registration</a>
+        </nav>
+
+        <hr>
+
+        <!--about section-->
+        <section id="about">
+            <h2>About The Event</h2>
+
+            <article>
+                <h3>Keynote Speaker: Dr. Adam Harid</h3>
+                <p>Dr. Adam Harid, a senior AI researcher, will be deliver an inspiring keynote section. </p>
+            </article>
+
+            <!--activity 2-->
+            <article>
+                <h3>Workshop: Cloud Deployment Basics</h3>
+                <p>This hands on workshop will guide students through deploying web using cloud services.</p>
+                </article>
+        </section>
+        <hr>
+        <!--event schedule table section-->
+        <section id="schedule">
+            <h2>Event Schedules</h2>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                    <th>Person in Charge</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>8.00 - 9.30 </td>
+                    <td>Registration &amp; Breakfast</td>
+                    <td>Main Lobby</td>
+                    <td>Event Secretariat</td>
+                </tr>
+
+                <tr>
+                    <td>9.30 - 10.30 </td>
+                    <td>Keynote Address &amp; Hackaton Briefing</td>
+                    <td>Auditorium Inos</td>
+                    <td>Dr. Adam Harid</td>
+                </tr>
+
+                <tr>
+                    <td>10.30 - 13.00</td>
+                    <td>Hacking Session 1</td>
+                    <td>rowspan="2">Lab Hall 1 &amp; 2</td>
+                    <td>Mentor Group A</td>
+                </tr>
+
+                <tr>
+                    <td>13.00 - 14.00</td>
+                    <td colspan="3">Networking Lunch Break </td>
+                </tr>
+
+                <tr>
+                    <td>14.00 - 17.00</td>
+                    <td>Hacking Session 2 &amp; Mentoring</td>
+                    <td>Lab Hall 1 &amp; 2</td>
+                    <td>Mentor Group B</td>
+                </tr>
+
+                <tr>
+                    <td>17.00 - 18.30</td>
+                    <td>Final Project Pitching &amp; Closing Caremony</td>
+                    <td>Auditorium Inos</td>
+                    <td>Organising Committee</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+    <!--registration form section-->
+    <section id="register">
+        <h2>registration Form</h2>
+        <form action="register.html" method="post">
+            <!--text input-->
+            <p>
+                <label for="fullname">Full Name: </label>
+                <input type="text" id="fullname" name="fullname" required>
+            </p>
+
+            <p>
+                <label for="matricnum">Matric Number: </label>
+                <input type="text" id="matricnum" name="matricnum" required>
+            </p>
+
+            <p>
+                <label for="email">Email Address: </label>
+                <input type="email" id="email" name="email" required>
+            </p>
+            <!--radio button-->
+            <p>
+                <label>Year of Study:</label>
+                <input type="radio" id="year1" name="year" value="1" required>
+                <label for="year1">Year 1</label>
+
+                <input type="radio" id="year2" name="year" value="2">
+                <label for="year2">Year 2</label>
+
+                <input type="radio" id="year3" name="year" value="3">
+                <label for="year3">Year 3</label>
+
+                <input type="radio" id="year4" name="year" value="4">
+                <label for="year4">Year 4</label>
+            </p>
+
+            <!--checkbox button-->
+            <p>
+                <label>Sessions You Wish to Attend:</label><br>
+                <input type="checkbox" id="session_keynote" name="sessions[]" value="keynote">
+                <label for="session_keynote">Keynote Address</label>
+
+                <input type="checkbox" id="session_workshop" name="sessions[]" value="workshop">
+                <label for="session_workshop">Cloud Deployment Workshop</label>
+
+                <input type="checkbox" id="session_pitching" name="sessions[]" value="pitching">
+                <label for="session_pitching">Final Project Pitching</label>
+            </p>
+        
+            <!--drop list-->
+            <p>
+                <label for="programme">Programme / Faculty:</label>
+                <select id="programme" name="programme" required>
+                    <option value="">-- Select Programme / Faculty --</option>
+                    <option value="cs">Faculty of Computer Science and Mathematics</option>
+                    <option value="se">Software Engineering</option>
+                    <option value="cs_sys">Computer Science (Mobile Computing)</option>
+                    <option value="it">Information Technology</option>
+                </select>
+            </p>
+
+            <!--submit button-->
+            <p>
+                <input type="submit" value="Register Now">
+            </p>
+        </form>
+    </section>
+
+    <hr>
+    <!--footer section-->
+    <footer> 
+        <p>Organised by FSKM, UMT</p>
+        <p>&copy; 2026 UMT Tech. All right reserver.</p>
+    </footer>
+    </body>
+</html>
