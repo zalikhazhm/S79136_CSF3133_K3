@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ticket Booking</title>
+</head>
+<body>
+
+<!-- 
+  Error Log & Line Numbers:
+  1. (Line 1): Incomplete <!DOCTYPE> declaration -> changed to <!DOCTYPE html>
+  2. (Line 9): Mismatched tags in header (<span> inside <h1> was closed incorrectly) -> restructured <h1> and <span>
+  3. (Line 11): Used <span id="content"> instead of a block element -> changed to <div id="content">
+  4. (Line 14): JavaScript addition concatenates strings -> wrapped inputs with Number() or used unary plus operator (+adult.value + +child.value)
+  5. (Line 18): Typo in email type attribute -> changed <input type="emial"> to <input type="email">
+  6. (Line 22-25): Mismatched datalist id linkage -> changed <datalist id="movielist"> to <datalist id="movies"> to match input list="movies"
+  7. (Line 31-32): Invalid range slider attributes (min="5" max="1" is inverted) -> changed to min="1" max="5"
+  8. (Line 33): Mismatched output 'for' attribute -> changed 'adult kid' to 'adult child'
+  9. (Line 38): Lowercase entity name -> changed &Copy; to &copy;
+  10. (Line 36/41): Extra closing tags and malformed document structure -> cleaned up wrapper </div> tags.
+-->
+
+<!-- Header Section -->
+<div id="header">
+    <h1>e-Ticket <span>Your Campus Cinema</span></h1>
+</div>
+
+<!-- Navigation / Content Section -->
+<div id="content">
+    <h2>Book Your Ticket</h2>
+    <p>Promotion: tickets &lt; RM10 for students &amp; staff!</p>
+
+    <!-- Booking Form with Ticket Count and Price Calculator -->
+    <form action="booking.php" oninput="total.value = (+adult.value) + (+child.value); price.value = (adult.value * 12) + (child.value * 8);">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="tel">Phone Number:</label>
+        <input type="tel" id="tel" name="tel" placeholder="012-3456789" required><br>
+
+        <label for="date">Show Date: </label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="time">Show Time: </label>
+        <input type="time" id="time" name="time" required><br>
+
+        <label for="movie">Movie:</label>
+        <input id="movie" name="movie" list="movies"><br>
+        <datalist id="movies">
+            <option value="Space Rangers">
+            <option value="Kampung Comedy">
+        </datalist>
+
+        <label for="adult">Adult tickets (RM 12):</label>
+        <input type="number" id="adult" name="adult" value="0" min="0"><br>
+
+        <label for="child">Child tickets (RM 8):</label>
+        <input type="number" id="child" name="child" value="0" min="0"><br>
+
+        <label for="rating">Rate our service: </label>
+        <input type="range" id="rating" name="rating" min="1" max="5"><br>
+
+        Total tickets: <output name="total" for="adult child">0</output><br>
+        Total Price (RM): <output name="price" for="adult child">0</output><br>
+
+        <input type="submit" value="Book Now">
+    </form>
+</div>
+
+<!-- Sidebar Section: Now Showing -->
+<div id="sidebar">
+    <h3>Now Showing</h3>
+    <ul>
+        <li><strong>Space Rangers</strong> - <span style="color:gray;">PG-13</span> | <a href="trailer1.html">Watch Trailer</a></li>
+        <li><strong>Kampung Comedy</strong> - <span style="color:gray;">U</span> | <a href="trailer2.html">Watch Trailer</a></li>
+        <li><strong>Campus Mystery</strong> - <span style="color:gray;">18</span> | <a href="trailer3.html">Watch Trailer</a></li>
+    </ul>
+</div>
+
+<!-- Footer Section -->
+<div id="footer">
+    <p>e-Ticket&reg; - Campus Cinema &lt; RM10 every Tuesday &copy; 2026. All rights reserved.</p>
+</div>
+
+</body>
+</html>
