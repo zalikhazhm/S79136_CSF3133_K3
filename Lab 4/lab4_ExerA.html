@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Visit Terengganu - Tourism Promotion</title>
+
+        <!--link to external CSS-->
+        <link rel="stylesheet" href="style.css">
+
+        <!--internal CSS for page styling-->
+        <style>
+            header {
+                background: linear-gradient(135deg, #005f73, #0a9396);
+                color: #ffffff;
+                padding: 30px 20px;
+                text-align: center;
+            }
+
+            header p {
+                font-size: 1.1em;
+                margin-top: 8px;
+                color: #e9d8a6;
+            }
+
+            .banner-highlight {
+                background-color: #ee9b00;
+                color: #001219;
+                padding: 4px 10px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+        </style>    
+    </head>
+    <body>
+
+        <!--page header-->
+        <header>
+            <h1>Visit Terengganu 2026</h1>
+            <p>Discover Stuning Islands, Rich Heritage &amp; <span class="banner-highlight">Student Deals!</span></p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#video">Promo Video</a></li>
+            <li><a href="#trip">Book a Trip</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Section 1: Destinations -->
+        <section id="destinations">
+            <h2>Top Student &amp; Visitor Packages</h2>
+            
+            <!-- Destination 1 -->
+            <article class="card">
+                <h3>Pulau Perhentian</h3>
+                <p>Crystal clear turquoise waters, coral reef snorkelling, and white sandy beaches perfect for a weekend getaway.</p>
+                <p class="price">
+                    <span class="old-price">RM 350</span> RM 249
+                </p>
+            </article>
+
+            <!-- Destination 2 -->
+            <article class="card">
+                <h3>Pulau Redang</h3>
+                <p>Experience marine park conservation, sea turtle spotting, and relaxing beachfront resorts.</p>
+                <p class="price">
+                    <span class="old-price">RM 420</span> RM 299
+                </p>
+            </article>
+
+            <!-- Destination 3 -->
+            <article class="card">
+                <h3>Kuala Terengganu Heritage Tour</h3>
+                <p>Explore Pasar Payang, the iconic Crystal Mosque, and authentic Keropok Lekor workshops.</p>
+                <p class="price">
+                    <span class="old-price">RM 150</span> RM 89
+                </p>
+            </article>
+
+            <!-- Trip Seats Meter -->
+            <div class="meter-box">
+                <label for="seats"><strong>Next Group Trip Availability:</strong> 28 of 40 seats filled</label><br>
+                <meter id="seats" min="0" max="40" value="28">28 out of 40 seats</meter>
+            </div>
+        </section>
+
+        <!-- Section 2: Promotional Video -->
+        <section id="video">
+            <h2>Experience the Beauty of Terengganu</h2>
+            <figure class="center">
+                <!-- Replace 'terengganu.mp4' with your local video file name -->
+                <video width="640" height="360" controls>
+                    <source src="terengganu.mp4" type="video/mp4">
+                    Your browser does not support the HTML5 video tag. Please update your browser to watch the promotional video.
+                </video>
+                <figcaption class="caption">Highlights of Terengganu's islands, traditional boats, and coastal culture.</figcaption>
+            </figure>
+        </section>
+
+        <!-- Section 3: Trip Interest Form -->
+        <section id="trip">
+            <h2>Register Your Trip Interest</h2>
+            <form action="#" method="post" class="trip-form">
+                
+                <!-- Text and Email Inputs -->
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail Address:</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <!-- Radio Buttons: Traveller Type -->
+                <div class="form-group">
+                    <p><strong>Traveller Type:</strong></p>
+                    <input type="radio" id="student" name="traveller_type" value="Student" required>
+                    <label for="student">Student</label>
+
+                    <input type="radio" id="staff" name="traveller_type" value="Staff">
+                    <label for="staff">Staff</label>
+
+                    <input type="radio" id="public" name="traveller_type" value="Public">
+                    <label for="public">Public</label>
+                </div>
+
+                <!-- Checkboxes: Interests -->
+                <div class="form-group">
+                    <p><strong>Interests (Select all that apply):</strong></p>
+                    <input type="checkbox" id="islands" name="interests" value="Islands">
+                    <label for="islands">Islands</label>
+
+                    <input type="checkbox" id="food" name="interests" value="Food">
+                    <label for="food">Food</label>
+
+                    <input type="checkbox" id="culture" name="interests" value="Culture">
+                    <label for="culture">Culture</label>
+
+                    <input type="checkbox" id="nature" name="interests" value="Nature">
+                    <label for="nature">Nature</label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Interest</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2026 Visit Terengganu Tourism Office. All rights reserved.</p>
+        <address>
+            Contact us for group bookings: <a href="mailto:info@visitterengganu.gov.my">info@visitterengganu.gov.my</a>
+        </address>
+    </footer>
+
+</body>
+</html>
+
